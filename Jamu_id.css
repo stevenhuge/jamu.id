@@ -1,0 +1,69 @@
+/* style.css */
+
+/* Bagian Hero Section */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    min-height: 500px; /* Tinggi minimum agar gambar terlihat */
+    position: relative;
+}
+
+/* Overlay gelap agar teks lebih mudah dibaca */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Hitam transparan */
+}
+
+/* Pastikan konten berada di atas overlay */
+.hero-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Custom button style */
+.custom-btn {
+    background-color: #28a745; /* Green color for buttons */
+    border-color: #28a745;
+}
+
+.custom-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    border-color: #1e7e34;
+}
+
+/* Navbar text color */
+.navbar-brand, .navbar-nav .nav-link {
+    color: white !important; /* Make navbar text white */
+}
+
+/* Card image adjustments */
+.card-img-top {
+    height: 200px; /* Fixed height for product images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+/* Product card hover effect */
+.product-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+/* Review card styling */
+.review-card {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/* Additional styling for reviews if needed */
+.review-card .card-body {
+    padding: 1.5rem;
+}
